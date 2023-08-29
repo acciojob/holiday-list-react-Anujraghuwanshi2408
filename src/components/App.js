@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
+import { element } from "prop-types";
 
 const App = () => {
     const cityList = [{ name: 'Goa', country: 'India' },
@@ -36,6 +37,14 @@ const App = () => {
   return (
     <div id="main">
                {/* Do not remove the main div */}
+               <h1>Top Vacation Cities</h1>
+                <ol>
+                  {cityList.map((city, index) => (
+                    <li key={`location${index + 1}`}>
+                      {cityList.name} ({cityList.country})
+                    </li>
+                  ))}
+                </ol>
     </div>
   )
 }
