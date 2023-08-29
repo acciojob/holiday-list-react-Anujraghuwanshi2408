@@ -41,7 +41,7 @@ const App = () => {
                 <ol>
                   {cityList.map((city, index) => (
                     <li key={`location${index + 1}`}>
-                      {cityList.name} ({cityList.country})
+                      {city.name} ({city.country})
                     </li>
                   ))}
                 </ol>
